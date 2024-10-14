@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onkeydown="even(event)">
+    <div id="Savebox"><input type="text" id="Save1input1cookie"></div>
+    <div id="start">
+        <div id="obenbar">
+            <button class="Loginbutton" onclick="LoginStart()">Anmelden</button>
+        </div>
+        <div class="untencontent">
+
+            <div id="pinboard"></div>
+
+            <div class="post it">
+                <div class="inputpostit"></div>
+                <div class="post corner"></div>
+            </div>
+        </div>
+    </div>
+    <div id="fileUp">
+        <input type="file" name="file" id="fileScan" onload="">
+    </div>
+</body>
+</html>
+<script src="./console.js"></script>
+<script>
+    function even(event){
+        if(event.key=="I"&&event.shiftKey==true){
+            document.body.style.backgroundColor = "black";
+            document.getElementById("start").style.display = "none";
+            document.getElementById("fileUp").style.display = "unset";
+        }
+    }
+    function Back(){
+        document.body.style.backgroundColor = "white";
+    }
+    const Ifile = document.getElementById("fileScan")
+    
+</script>
