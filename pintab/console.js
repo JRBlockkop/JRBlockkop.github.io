@@ -15,7 +15,7 @@ const Pin = {
     }
 }
 function LoginStart(){
-    window.location = "file:///E:/Janneck/HTML/Pintab/login.html"
+    window.location = "JRBlockkop.github.io/pintab/login.html"
 }
 function DataUserGet(){
     document.getElementById("ifrdata")
