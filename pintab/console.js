@@ -3,7 +3,7 @@ const Pin = {
         status:"off",
     },
     User:{
-        name:null;
+        name:null,
     },
     status:function (){
         if(JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).username!=''){
@@ -15,7 +15,7 @@ const Pin = {
     }
 }
 function LoginStart(){
-    window.location = "JRBlockkop.github.io/pintab/login.html"
+    window.location = "https://JRBlockkop.github.io/pintab/login.html"
 }
 function DataUserGet(){
     document.getElementById("ifrdata")
