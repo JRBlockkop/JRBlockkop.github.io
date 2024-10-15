@@ -20,8 +20,8 @@ function LoginStart(){
 function DataUserGet(){
     JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).username
 }
-function DataUserSet(){
-    
+function DataUserSetN(name){
+    document.getElementById("ifrdata").contentDocument.location.href = "https://jrblockkop.github.io/pintab/data.html?username="+name
 }
 function LoginData(username,password){
     Pin.User.name=username;
