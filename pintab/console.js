@@ -20,3 +20,7 @@ function LoginStart(){
 function DataUserGet(){
     document.getElementById("ifrdata")
 }
+function LoginData(username,password){
+    Pin.User.name=username;
+    location.reload();
+}
