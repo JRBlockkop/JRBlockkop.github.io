@@ -18,7 +18,10 @@ function LoginStart(){
     window.location = "https://JRBlockkop.github.io/pintab/login.html"
 }
 function DataUserGet(){
-    document.getElementById("ifrdata")
+    JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).username
+}
+function DataUserSet(){
+    
 }
 function LoginData(username,password){
     Pin.User.name=username;
