@@ -24,6 +24,5 @@ function DataUserSetN(name){
     document.getElementById("ifrdata").contentDocument.location.href = "https://jrblockkop.github.io/pintab/data.html?username="+name
 }
 function LoginData(username,password){
-    Pin.User.name=username;
-    location.reload();
+    fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>console.log(x.read()))
 }
