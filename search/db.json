@@ -1,4 +1,4 @@
-[
-  {url:"google.com",keywords:["search","google"]},
-  {url:"wikipedia.com/wiki/Wiki",keywords:["wiki","wikipedia"]},
-]
+{
+  search:["H","google"],
+  url:["","https://www.google.com"]
+}
