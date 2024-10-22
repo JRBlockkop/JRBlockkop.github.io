@@ -36,6 +36,7 @@
             <script>
                 URLSP = new URLSearchParams(location.search)
                 document.getElementById("searchbar").value = URLSP.get("q")
+                if(periodictable.list.indexOf(URLSP.get("q"))!=-1)
             </script>
         </div>
         <div id="specialresult">
