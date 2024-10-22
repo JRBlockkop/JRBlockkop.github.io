@@ -29,15 +29,17 @@
         }
     </style>
 </head>
-<body>
+<body onload="load()">
     <div class="content">
         <div class="inputsearch">
             <input id="searchbar">
             <script>
                 URLSP = new URLSearchParams(location.search)
                 document.getElementById("searchbar").value = URLSP.get("q")
-                if(periodictable.list.indexOf(URLSP.get("q"))!=-1){
-                    atom(URLSP.get("q"))
+                function load(){
+                    if(periodictable.list.indexOf(URLSP.get("q"))!=-1){
+                        atom(URLSP.get("q"))
+                    }
                 }
             </script>
         </div>
