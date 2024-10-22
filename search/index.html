@@ -20,6 +20,11 @@
         }
         div.inputsearch>input{
             height:50px;
+            width:calc(100vw - 200px);
+        }
+        .resultbox{
+            height:200px;
+            width:100vw;
         }
     </style>
 </head>
@@ -31,6 +36,18 @@
                 URLSP = new URLSearchParams(location.search)
                 document.getElementById("searchbar").value = URLSP.get("q")
             </script>
+        </div>
+        <div id="specialresult">
+            
+        </div>
+        <div id="result1" class="resultbox">
+            
+        </div>
+        <div id="result2" class="resultbox">
+            
+        </div>
+        <div id="result3" class="resultbox">
+            
         </div>
     </div>
 </body>
