@@ -6,5 +6,5 @@ function result(string){
     
 }
 function atom(str){
-    document.getElementById("specialresult").innerHTML="<h1>"+periodictable.data[periodictable.list.indexOf(str)]+"</h1>"
+    document.getElementById("specialresult").innerHTML="<h1>"+periodictable.data[periodictable.list.indexOf(str)].name+"</h1><br><u><b>Symbol:</u></b><p>"+periodictable.data[periodictable.list.indexOf(str)].symbol+"</p>"
 }
