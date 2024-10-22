@@ -1,6 +1,6 @@
 periodictable = {
   list:["H","He","Li","Be","B","C","N","O","F","Ne"],
-  data:[{name:"Hydrogen",symbol:"H",electrons:1,protons:1,neutrons:0}],
+  data:[{name:"Hydrogen",symbol:"H",electrons:1,protons:1,neutrons:0},{name:"Helium",symbol:"He",electrons:2,protons:2,neutrons:2}],
 }
 function result(string){
     
