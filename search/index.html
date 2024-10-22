@@ -32,7 +32,7 @@
 <body onload="load()">
     <div class="content">
         <div class="inputsearch">
-            <input id="searchbar">
+            <input id="searchbar" onkeydown="Ev(event)">
             <script>
                 URLSP = new URLSearchParams(location.search)
                 document.getElementById("searchbar").value = URLSP.get("q")
@@ -40,6 +40,11 @@
                     if(periodictable.list.indexOf(URLSP.get("q"))!=-1){
                         atom(URLSP.get("q"))
                     }
+                }
+                function Ev(e) {
+                if(e.key=="Enter"){
+	            location.href = "https://JRBlockkop.github.io/search/?q="+document.getElementById("searchbar").value
+                }
                 }
             </script>
         </div>
