@@ -26,4 +26,5 @@ function DataUserSetN(name){
 }
 function LoginData(username,password){
     fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=y)
+    console.log(Pin.data)
 }
