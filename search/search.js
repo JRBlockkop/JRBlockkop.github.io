@@ -12,5 +12,5 @@ function result(href,name,){
     
 }
 function atom(str){
-    document.getElementById("specialresult").innerHTML="<h1>"+periodictable.data[periodictable.list.indexOf(str)].name+"</h1><p><u><b>Symbol:</u></b>"+periodictable.data[periodictable.list.indexOf(str)].symbol+"</p>"
+    document.getElementById("specialresult").innerHTML="<h1>"+periodictable.data[periodictable.list.indexOf(str)].name+"</h1><p><u><b>Symbol:</u></b>"+periodictable.data[periodictable.list.indexOf(str)].symbol+"</p>"+"<p><u><b>Atomic mass:</u></b>"+periodictable.data[periodictable.list.indexOf(str)].mass+"</p>"
 }
