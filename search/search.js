@@ -1,6 +1,6 @@
 periodictable = {
   list:["Hydrogen","Helium","Lithium","Beryllium","Boron","Carbon","N","O","F","Ne"],
-  data:[{name:"Hydrogen",symbol:"H",electrons:1,protons:1,neutrons:0},
+  data:[{name:"Hydrogen",symbol:"H",electrons:1,protons:1,neutrons:0,mass:1.0078},
         {name:"Helium",symbol:"He",electrons:2,protons:2,neutrons:2},
         {name:"Lithium",symbol:"Li",electrons:3,protons:3,neutrons:4},
         {name:"Beryllium",symbol:"Be",electrons:4,protons:4,neutrons:5},
@@ -12,5 +12,5 @@ function result(string){
     
 }
 function atom(str){
-    document.getElementById("specialresult").innerHTML="<h1>"+periodictable.data[periodictable.list.indexOf(str)].name+"</h1><br><p><u><b>Symbol:</u></b>"+periodictable.data[periodictable.list.indexOf(str)].symbol+"</p>"
+    document.getElementById("specialresult").innerHTML="<h1>"+periodictable.data[periodictable.list.indexOf(str)].name+"</h1><p><u><b>Symbol:</u></b>"+periodictable.data[periodictable.list.indexOf(str)].symbol+"</p>"
 }
