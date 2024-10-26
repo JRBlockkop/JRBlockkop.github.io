@@ -8,7 +8,7 @@ periodictable = {
         {name:"Carbon",symbol:"C",electrons:6,protons:6,neutrons:6},
        ],
 }
-function result(string){
+function result(href,name,){
     
 }
 function atom(str){
