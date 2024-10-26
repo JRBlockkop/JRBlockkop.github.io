@@ -17,6 +17,9 @@ const Pin = {
         }
     }
 }
+function CheckLogin(){
+    
+}
 function BntLogin(){
     window.location = "https://JRBlockkop.github.io/pintab/login.html"
 }
