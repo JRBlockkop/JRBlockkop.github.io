@@ -4,7 +4,9 @@ const Pin = {
     },
     data:null,
     User:{
+        data:null,
         name:null,
+        sha:null,
     },
     status:function (){
         if(JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).username!=''){
@@ -19,7 +21,9 @@ function LoginStart(){
     window.location = "https://JRBlockkop.github.io/pintab/login.html"
 }
 function DataUserGet(){
-    JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).username
+    Pin.User.data = JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML);
+    Pin.User.name = JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).username;
+    Pin.User.sha = JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).shapassword;
 }
 function DataUserSetN(name){
     document.getElementById("ifrdata").contentDocument.location.href = "https://jrblockkop.github.io/pintab/data.html?username="+name
