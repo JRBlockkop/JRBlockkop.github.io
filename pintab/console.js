@@ -18,7 +18,9 @@ const Pin = {
     }
 }
 function CheckLogin(){
-    
+    if(Pin.User.data.username!="" || Pin.User.data.shapassword!=""){
+        return false;
+    }
 }
 function BntLogin(){
     window.location = "https://JRBlockkop.github.io/pintab/login.html"
