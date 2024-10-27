@@ -48,7 +48,7 @@ function DataUserSetN(name){
     document.getElementById("ifrdata").src = "https://jrblockkop.github.io/pintab/data.html?username="+name
 }
 function DataUserSetP(sha){
-    document.getElementById("ifrdata").src = "https://jrblockkop.github.io/pintab/data.html?shapassword="+sha
+    document.getElementById("ifrdata").src = "https://jrblockkop.github.io/pintab/data.html?shap="+sha
 }
 async function LoginData(username,password){
     await fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=JSON.parse(y))
