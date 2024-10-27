@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="console.js"></script>
     <script>
-        function form(){
-            LoginData(document.getElementById("text-eEgvfn83"),document.getElementById("password-mnpw47"))
-        }
         window.onload = function () {
             DataUserGet()
             CheckLogin()
@@ -24,7 +21,7 @@
         
             <input type="text" placeholder="Username" id="text-eEgvfn83" required>
             <input type="password" placeholder="Password" id="password-mnpw47" required>
-            <button onclick="form()">Login</button>
+            <button onclick="LoginData(document.getElementById("text-eEgvfn83"),document.getElementById("password-mnpw47"))">Login</button>
         
         <a href=""></a>
     </div>
