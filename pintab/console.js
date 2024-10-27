@@ -39,7 +39,7 @@ async function CheckLogin(){
 function BntLogin(){
     window.location = "https://JRBlockkop.github.io/pintab/login.html"
 }
-function AlreadyLogin(){
+async function AlreadyLogin(){
     DataUserGet()
     if(Pin.User.data.username!="" || Pin.User.data.shapassword!=""){
         await fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=JSON.parse(y))
