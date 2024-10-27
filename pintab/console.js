@@ -17,6 +17,18 @@ const Pin = {
         }
     }
 }
+let Get;
+const SHA256 = val =>
+    crypto.subtle
+    .digest('SHA-256', new TextEncoder('utf-8').encode(val))
+    .then(h => {
+      let hexes = [],
+        view = new DataView(h);
+      for (let i = 0; i < view.byteLength; i += 4)
+        hexes.push(('00000000' + view.getUint32(i).toString(16)).slice(-8));
+      return hexes.join('');
+    });
+
 function CheckLogin(){
     if(Pin.User.data.username!="" || Pin.User.data.shapassword!=""){
         return false;
@@ -33,7 +45,9 @@ function DataUserGet(){
 function DataUserSetN(name){
     document.getElementById("ifrdata").contentDocument.location.href = "https://jrblockkop.github.io/pintab/data.html?username="+name
 }
-function LoginData(username,password){
-    fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=y)
+async function LoginData(username,password){
+    await fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=y)
+    await SHA256(username).then(x=> Get = x)
+    if(Pin.data.indexOf(Get)){}
     console.log(Pin.data)
 }
