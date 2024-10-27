@@ -46,7 +46,7 @@ function DataUserSetN(name){
     document.getElementById("ifrdata").contentDocument.location.href = "https://jrblockkop.github.io/pintab/data.html?username="+name
 }
 async function LoginData(username,password){
-    await fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=y)
+    await fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=JSON.parse(y))
     await SHA256(username).then(x=> Get = x)
     if(Pin.data.data.users.name.indexOf(Get)){}
     console.log(Pin.data)
