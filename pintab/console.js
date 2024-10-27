@@ -6,7 +6,6 @@ const Pin = {
     User:{
         data:null,
         name:null,
-        sha:null,
     },
     status:function (){
         if(JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).username!=''){
@@ -31,18 +30,31 @@ const SHA256 = val =>
       return hexes.join('');
     });
 
-function CheckLogin(){
+async function CheckLogin(){
     if(Pin.User.data.username!="" || Pin.User.data.shapassword!=""){
-        return false;
+        await fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=JSON.parse(y))
+        await SHA256(Pin.User.data.username).then(x=> Get = x);
     }
 }
 function BntLogin(){
     window.location = "https://JRBlockkop.github.io/pintab/login.html"
 }
+function AlreadyLogin(){
+    DataUserGet()
+    if(Pin.User.data.username!="" || Pin.User.data.shapassword!=""){
+        await fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=JSON.parse(y))
+        await SHA256(Pin.User.data.username).then(x=> Get = x);
+        await SHA256(Pin.User.data.shapassword).then(x=> Het = x
+          
+        if(Pin.data.data.users.name.indexOf(Get)!=-1){
+            if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Het){
+                Pin.User.name = Pin.User.data.username;
+            }
+        }
+    }
+}
 function DataUserGet(){
     Pin.User.data = JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML);
-    Pin.User.name = JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).username;
-    Pin.User.sha = JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).shapassword;
 }
 function DataUserSetN(name){
     document.getElementById("ifrdata").src = "https://jrblockkop.github.io/pintab/data.html?username="+name
@@ -59,7 +71,7 @@ async function LoginData(username,password){
         if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Jet){
             DataUserSetN(username);
             DataUserSetP(Het);
+            Pin.User.name = username;
         }
     }
-    console.log(Pin.data)
 }
