@@ -44,7 +44,7 @@ async function AlreadyLogin(){
     if(Pin.User.data.username!="" || Pin.User.data.shapassword!=""){
         await fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=JSON.parse(y))
         await SHA256(Pin.User.data.username).then(x=> Get = x);
-        await SHA256(Pin.User.data.shapassword).then(x=> Het = x
+        await SHA256(Pin.User.data.shapassword).then(x=> Het = x)
           
         if(Pin.data.data.users.name.indexOf(Get)!=-1){
             if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Het){
