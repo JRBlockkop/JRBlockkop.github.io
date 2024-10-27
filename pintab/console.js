@@ -49,7 +49,7 @@ async function AlreadyLogin(){
         if(Pin.data.data.users.name.indexOf(Get)!=-1){
             if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Het){
                 Pin.User.name = Pin.User.data.username;
-                document.getElementById("obenbar").innerHTML = '<button class="Account" title="JRBlockkop">J</button>'
+                document.getElementById("obenbar").innerHTML = '<div class="Account"><div class="icon-color red">'+Pin.User.name[0]+'</div>'+Pin.User.name+'</div>';
             }
         }
     }
