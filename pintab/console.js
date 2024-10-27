@@ -19,6 +19,7 @@ const Pin = {
 }
 let Get;
 let Het;
+let Jet;
 const SHA256 = val =>
     crypto.subtle
     .digest('SHA-256', new TextEncoder('utf-8').encode(val))
@@ -46,13 +47,18 @@ function DataUserGet(){
 function DataUserSetN(name){
     document.getElementById("ifrdata").contentDocument.location.href = "https://jrblockkop.github.io/pintab/data.html?username="+name
 }
+function DataUserSetP(sha){
+    document.getElementById("ifrdata").contentDocument.location.href = "https://jrblockkop.github.io/pintab/data.html?shapassword="+sha
+}
 async function LoginData(username,password){
     await fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=JSON.parse(y))
     await SHA256(username).then(x=> Get = x)
     await SHA256(password).then(x=> Het = x)
-    await SHA256(Het).then(x=> Het = x)
+    await SHA256(Het).then(x=> Jet = x)
     if(Pin.data.data.users.name.indexOf(Get)!=-1){
         if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Het){
+            DataUserSetN(username);
+            DataUserSetP(sha);
             document.write("Login Fertig")
         }
     }
