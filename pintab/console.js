@@ -8,12 +8,6 @@ const Pin = {
         name:null,
     },
     status:function (){
-        if(JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).username!=''){
-            Pin.User.name=JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).username
-        }
-        if(Pin.User.name != ''){
-            document.getElementById("obenbar").innerHTML = '<div class="Account"><div class="icon-color red">'+Pin.User.name[0]+'</div>'+Pin.User.name+'</div>';
-        }
     }
 }
 let Get;
@@ -49,7 +43,7 @@ async function AlreadyLogin(){
         if(Pin.data.data.users.name.indexOf(Get)!=-1){
             if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Het){
                 Pin.User.name = Pin.User.data.username;
-                document.getElementById("obenbar").innerHTML = '<div class="Account"><div class="icon-color red">'+Pin.User.name[0]+'</div>'+Pin.User.name+'</div>';
+                document.getElementById("obenbar").innerHTML = '<div class="Account"><div class="icon-color red">'+Pin.User.name[0]+'</div></div>';
             }
         }
     }else{
