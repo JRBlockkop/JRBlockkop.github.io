@@ -56,9 +56,9 @@ async function LoginData(username,password){
     await SHA256(password).then(x=> Het = x)
     await SHA256(Het).then(x=> Jet = x)
     if(Pin.data.data.users.name.indexOf(Get)!=-1){
-        if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Het){
+        if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Jet){
             DataUserSetN(username);
-            DataUserSetP(sha);
+            DataUserSetP(Het);
             document.write("Login Fertig")
         }
     }
