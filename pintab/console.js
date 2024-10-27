@@ -67,7 +67,9 @@ async function LoginData(username,password){
     if(Pin.data.data.users.name.indexOf(Get)!=-1){
         if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Jet){
             DataUserSetN(username);
+            setTimeout( function (){
             DataUserSetP(Het);
+            },250)
             Pin.User.name = username;
         }
     }
