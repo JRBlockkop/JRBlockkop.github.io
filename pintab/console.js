@@ -48,6 +48,6 @@ function DataUserSetN(name){
 async function LoginData(username,password){
     await fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=y)
     await SHA256(username).then(x=> Get = x)
-    if(Pin.data.indexOf(Get)){}
+    if(Pin.data.data.users.name.indexOf(Get)){}
     console.log(Pin.data)
 }
