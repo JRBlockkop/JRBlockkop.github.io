@@ -59,7 +59,6 @@ async function LoginData(username,password){
         if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Jet){
             DataUserSetN(username);
             DataUserSetP(Het);
-            document.write("Login Fertig")
         }
     }
     console.log(Pin.data)
