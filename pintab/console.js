@@ -52,6 +52,8 @@ async function AlreadyLogin(){
                 document.getElementById("obenbar").innerHTML = '<div class="Account"><div class="icon-color red">'+Pin.User.name[0]+'</div>'+Pin.User.name+'</div>';
             }
         }
+    }else{
+        document.getElementById("obenbar").innerHTML = '<button class="Loginbutton" onclick="BntLogin()" title="Anmelden">Anmelden</button>'
     }
 }
 function DataUserGet(){
