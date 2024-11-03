@@ -71,7 +71,9 @@ async function LoginData(username,password){
             DataUserSetP(Het);
             },250)
             Pin.User.name = username;
-            window.location = "https://JRBlockkop.github.io/pintab/mystuff"
+            setTimeout( function (){
+                window.location = "https://JRBlockkop.github.io/pintab/mystuff"
+            },1000)
         }
     }
 }
