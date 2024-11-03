@@ -31,7 +31,7 @@ async function CheckLogin(){
     }
 }
 function BntLogin(){
-    window.location = "https://JRBlockkop.github.io/pintab/login.html"
+    window.location = "https://JRBlockkop.github.io/pintab/login"
 }
 async function AlreadyLogin(){
     DataUserGet()
@@ -71,6 +71,7 @@ async function LoginData(username,password){
             DataUserSetP(Het);
             },250)
             Pin.User.name = username;
+            window.location = "https://JRBlockkop.github.io/pintab/mystuff"
         }
     }
 }
