@@ -94,7 +94,7 @@ div{
     background-color: red;
 }
 .Account{
-    margin-left: calc(100vw - 120px);
+    margin-left: calc(100vw - 46px);
     display: flex;
     justify-content: center;
     align-items: center;
