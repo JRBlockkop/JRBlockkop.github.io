@@ -33,6 +33,9 @@ async function CheckLogin(){
 function BntLogin(){
     window.location = "https://JRBlockkop.github.io/pintab/login"
 }
+function Sestion(){
+    
+}
 async function AlreadyLogin(){
     DataUserGet()
     if(Pin.User.data.username!="" || Pin.User.data.shapassword!=""){
