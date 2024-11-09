@@ -7,5 +7,10 @@ const sentence = {
    object:"",
    manner:"",
    place:"",
-  time_2:""
+   time_2:"",
+   write:function (){
+      if(time_1=""){
+         return this.subject.charAt(0).toUpperCase()+this.subject.slice(1)
+      }
+   }
 }
