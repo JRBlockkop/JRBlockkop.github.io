@@ -14,3 +14,10 @@ const sentence = {
       }
    }
 }
+let Get;
+async function T(num){
+   let x = await fetch("https://jrblockkop.github.io/ai/language.json")
+   let y = await x.text()
+   Get = JSON.parse(y)
+}
+T()
