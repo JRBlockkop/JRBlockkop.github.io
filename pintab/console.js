@@ -61,11 +61,13 @@ async function AlreadyLogin(){
     }
 }
 function DataUserGet(){
-    Pin.User.data.username = JSON.parse(JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).ptt).name
-    Pin.User.data.shapassword = JSON.parse(JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).ptt).dsha
+    Pin.User.data.username = window.localStorage.getItem("name")
+    Pin.User.data.shapassword = window.localStorage.getItem("sha")
 }
 function DataUserSet(name,sha,t){
-    document.getElementById("ifrdata").src = "https://jrblockkop.github.io/pintab/data.html?ptt={'t'="+t+",'name'="+name+",'dsha'="+sha+"}"
+    window.localStorage.setItem("name",name)
+    window.localStorage.setItem("sha",sha)
+    window.localStorage.setItem("t",t)
 }
 
 async function LoginData(username,password){
