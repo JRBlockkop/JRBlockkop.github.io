@@ -80,6 +80,12 @@ async function LoginData(username,password){
         }
     }
 }
+let AccountMenuBool=true;
 function AccountMenu(){
-    document.getElementById("account-menu").style.display = "block"
+    AccountMenuBool=!AccountMenuBool;
+    if(!AccountMenuBool){
+        document.getElementById("account-menu").style.display = "block"
+    }else{
+        document.getElementById("account-menu").style.display = "none"
+    }
 }
