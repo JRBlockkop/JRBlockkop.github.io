@@ -76,7 +76,7 @@ async function LoginData(username,password){
     if(Pin.data.data.users.name.indexOf(Get)!=-1){
         if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Jet){
             Pin.User.name = username;
-            DataUserSet(username,Het,Pin.time);
+            DataUserSet(username,Het,Pin.time());
             setTimeout( function (){
                 window.location = "https://JRBlockkop.github.io/pintab/mystuff"
             },500)
