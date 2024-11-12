@@ -94,3 +94,8 @@ function AccountMenu(){
         document.getElementById("account-menu").style.display = "none"
     }
 }
+function Logout(){
+    window.localStorage.clear()
+    window.location = "https://JRBlockkop.github.io/pintab/"
+    
+}
