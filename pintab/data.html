@@ -11,25 +11,17 @@
 </html>
 <script>
     const Data = {
-        username: "",
-        shapassword:""
+        PTT=""
     }
     function Load(){
         document.body.innerHTML = JSON.stringify(Data)
     }
     const URLP = new URLSearchParams(window.location.search)
-    if(URLP.get("shap")!=null){
-        window.localStorage.setItem("shap",URLP.get("shap"))
+    if(URLP.get("ptt")!=null){
+        window.localStorage.setItem("ptt",URLP.get("ptt"))
     }
-    if(URLP.get("username")!=null){
-        window.localStorage.setItem("username",URLP.get("username"))
-        
-    }
-    if(window.localStorage.getItem("username")!=null){
-        Data.username = window.localStorage.getItem("username")
-    }
-    if(window.localStorage.getItem("shap")!=null){
-        Data.shapassword = window.localStorage.getItem("shap")
+    if(window.localStorage.getItem("ptt")!=null){
+        Data.ptt = window.localStorage.getItem("ptt")
     }
     Load()
 </script>
