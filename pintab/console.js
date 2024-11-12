@@ -2,7 +2,10 @@ const Pin = {
     console:{
         status:"off",
     },
-    data:null,
+    data:{
+        username:null,
+        shapassword:null,
+    },
     User:{
         data:null,
         name:null,
