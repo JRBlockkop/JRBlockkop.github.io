@@ -54,7 +54,8 @@ async function AlreadyLogin(){
     }
 }
 function DataUserGet(){
-    Pin.User.data = JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML);
+    Pin.User.data.username = JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).name
+    Pin.User.data.shapassword = JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).dsha
 }
 function DataUserSet(name,sha,t){
     document.getElementById("ifrdata").src = "https://jrblockkop.github.io/pintab/data.html?ptt={t="+t+",name="+name+",dsha="+sha+"}"
