@@ -6,6 +6,10 @@ const Pin = {
     User:{
         data:null,
         name:null,
+        role:null,
+    },
+    time:function(){
+        
     },
     status:function (){
     }
