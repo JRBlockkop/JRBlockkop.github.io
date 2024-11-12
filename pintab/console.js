@@ -68,14 +68,11 @@ async function LoginData(username,password){
     await SHA256(Het).then(x=> Jet = x)
     if(Pin.data.data.users.name.indexOf(Get)!=-1){
         if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Jet){
-            DataUserSetN(username);
-            setTimeout( function (){
-            DataUserSetP(Het);
-            },250)
             Pin.User.name = username;
+            DataUserSet(username,Het,Pin.time);
             setTimeout( function (){
                 window.location = "https://JRBlockkop.github.io/pintab/mystuff"
-            },1000)
+            },500)
         }
     }
 }
