@@ -56,12 +56,10 @@ async function AlreadyLogin(){
 function DataUserGet(){
     Pin.User.data = JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML);
 }
-function DataUserSetN(name){
-    document.getElementById("ifrdata").src = "https://jrblockkop.github.io/pintab/data.html?username="+name
+function DataUserSet(name,sha,t){
+    document.getElementById("ifrdata").src = "https://jrblockkop.github.io/pintab/data.html?ptt={t="+t+",name="+name+",dsha="+sha+"}"
 }
-function DataUserSetP(sha){
-    document.getElementById("ifrdata").src = "https://jrblockkop.github.io/pintab/data.html?shap="+sha
-}
+
 async function LoginData(username,password){
     await fetch("https://JRBlockkop.github.io/pintab/db.json").then(x=>x.text()).then(y=>Pin.data=JSON.parse(y))
     await SHA256(username).then(x=> Get = x)
