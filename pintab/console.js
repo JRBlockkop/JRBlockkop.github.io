@@ -46,7 +46,7 @@ async function AlreadyLogin(){
         if(Pin.data.data.users.name.indexOf(Get)!=-1){
             if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Het){
                 Pin.User.name = Pin.User.data.username;
-                document.getElementById("obenbar").innerHTML = '<div class="Account"><div class="icon-color red">'+Pin.User.name[0]+'</div></div>';
+                document.getElementById("obenbar").innerHTML = '<div class="Account" onclick="AccountMenu()"><div class="icon-color red">'+Pin.User.name[0]+'</div></div>';
             }
         }
     }else{
@@ -79,4 +79,7 @@ async function LoginData(username,password){
             },1000)
         }
     }
+}
+function AccountMenu(){
+    document.getElementById("account-menu").style.display = "block"
 }
