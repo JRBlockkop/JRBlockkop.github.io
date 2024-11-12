@@ -65,7 +65,7 @@ function DataUserGet(){
     Pin.User.data.shapassword = JSON.parse(JSON.parse(document.getElementById("ifrdata").contentDocument.body.innerHTML).ptt).dsha
 }
 function DataUserSet(name,sha,t){
-    document.getElementById("ifrdata").src = "https://jrblockkop.github.io/pintab/data.html?ptt={t="+t+",name="+name+",dsha="+sha+"}"
+    document.getElementById("ifrdata").src = "https://jrblockkop.github.io/pintab/data.html?ptt={'t'="+t+",'name'="+name+",'dsha'="+sha+"}"
 }
 
 async function LoginData(username,password){
