@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANN</title>
+</head>
+<body>
+    <div class="content">
+        <div class="menu">
+            <input type="checkbox" id="l1l">
+            <input type="checkbox" id="l2l">
+            <button onclick="start()">Send</button>
+        </div>
+        <div id="demo"></div>
+    </div>
+</body>
+</html>
+<script>
+    const ANN = {
+        input:[0,0],
+        hiddenlayer:[[{weights:[-1,-1],bias:1},{weights:[1,1],bias:-1},{weights:[1,-1],bias:0},{weights:[-1,1],bias:0}]],
+        placeholder:[],
+        hiddenlayerdata:[],
+        outputlayerdata:[],
+        outputlayer:[{weights:[1,0,0,0],bias:0},{weights:[0,1,0,0],bias:0},{weights:[0,0,1,1],bias:0},],
+        outputs:["blank","full","point"],
+        output:null,
+        run:(arr)=>{
+            ANN.hiddenlayerdata=[];
+            ANN.outputlayerdata=[];
+            ANN.input=arr;
+            for(I in ANN.hiddenlayer[0]){
+                ANN.placeholder=[]
+                for(J in ANN.input){
+                    ANN.placeholder.push(ANN.input[J]*ANN.hiddenlayer[0][I].weights[J])
+                }
+                ANN.hiddenlayerdata.push(RELU(ANN.placeholder.reduce(sum)+ANN.hiddenlayer[0][I].bias))
+            }
+            for(I in ANN.outputlayer){
+                ANN.placeholder=[]
+                for(J in ANN.hiddenlayerdata){
+                    ANN.placeholder.push(ANN.hiddenlayerdata[J]*ANN.outputlayer[I].weights[J])
+                }
+                ANN.outputlayerdata.push(RELU(ANN.placeholder.reduce(sum)+ANN.outputlayer[I].bias))
+            }
+            ANN.output = ANN.outputs[ANN.outputlayerdata.indexOf(ANN.outputlayerdata.toSorted(function(a, b){return b - a})[0])]
+            return ANN.output;
+        }
+    }
+    function RELU(x){
+        if(x>=0){return x}else{return 0}
+    }
+    function sum(total, value, index, array){
+        return total + value;
+    }
+    function start(){
+        document.getElementById("demo").innerHTML = ANN.run([
+            document.getElementById("l1l").checked+0,
+            document.getElementById("l2l").checked+0,
+        ])
+    }
+</script>
