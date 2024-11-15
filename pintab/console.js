@@ -61,8 +61,12 @@ async function AlreadyLogin(){
     }
 }
 function DataUserGet(){
-    Pin.User.data.username = window.localStorage.getItem("name")
-    Pin.User.data.shapassword = window.localStorage.getItem("sha")
+    if(window.localStorage.getItem("name")!=null){
+        Pin.User.data.username = window.localStorage.getItem("name")
+    }
+    if(window.localStorage.getItem("sha")!=null){
+        Pin.User.data.shapassword = window.localStorage.getItem("sha")
+    }
 }
 function DataUserSet(name,sha,t){
     window.localStorage.setItem("name",name)
