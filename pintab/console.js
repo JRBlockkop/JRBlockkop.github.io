@@ -5,8 +5,8 @@ const Pin = {
     data:null,
     User:{
         data:{
-            username:null,
-            shapassword:null,
+            username:"",
+            shapassword:"",
         },
         name:null,
         role:null,
