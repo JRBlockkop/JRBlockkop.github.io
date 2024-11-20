@@ -1,24 +1,8 @@
 {
-    "Article":["the","a","an","many","some","any"],
-    "Verb":{
-        "S":{
-            "V1":["is"],
-            "V2":["was"],
-            "V3":["been"]
-        },
-        "P":{
-            "V1":["are"],
-            "V2":["were"],
-            "V3":["been"]
-        },
-        "I":{
-            "V1":["am"],
-            "V2":["was"],
-            "V3":["been"]
-        }
-    },
-    "Nouns":["sky"],
-    "Adjectives":{
-        "color":["blue"]
-    }
+    "words":[
+        "The"
+    ],
+    "data":[
+        {"v":[-5,2,2]}
+    ]
 }
