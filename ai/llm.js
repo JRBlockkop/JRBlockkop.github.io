@@ -1,6 +1,6 @@
 const data = [];
 function WordtoToken(str){
-   console.log(Get)
+   Get.data[Get.words.indexOf(str)].v
 }
 let Get;
 async function Start(num){
