@@ -3,7 +3,7 @@ function WordtoToken(str){
    return Get.data[Get.words.indexOf(str)].v
 }
 function Send(){
-   let Tokens = document.querySelector("textarea").value .split(" ")
+   let Tokens = document.querySelector("textarea").value.split(" ")
 }
 let Get;
 async function Start(num){
