@@ -1,5 +1,5 @@
 const Pintab={
-    signIn:function ()=>{
+    signIn:()=>{
         window.open("https://jrblockkop.github.io/pintab/login")
     }
 }
