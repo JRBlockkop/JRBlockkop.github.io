@@ -45,7 +45,8 @@
 			await fetch("https://JRBlockkop.github.io/search/db.json")
 				.then(x => x.text())
 				.then(y => GET = y);
-			db = JSON.parse(GET)
+			db = JSON.parse(GET);
+			
                 }
                 function Ev(e) {
                 	if(e.key=="Enter"){
