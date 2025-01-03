@@ -1,4 +1,13 @@
 {
-  "keyword":["google"],
-  "urls":[["https://www.google.com","https://en.wikipedia.org/wiki/Google","https://accounts.google.com","https://x.com/Google","https://youtube.com/@Google"]]
+  "keyword":[
+    "google",
+    "microsoft",
+    "youtube",
+    "github",
+    ""
+  ],
+  "urls":[
+    ["https://www.google.com","https://en.wikipedia.org/wiki/Google","https://accounts.google.com","https://x.com/Google","https://youtube.com/@Google"],
+    []
+  ]
 }
