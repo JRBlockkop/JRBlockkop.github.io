@@ -34,18 +34,18 @@
         <div class="inputsearch">
             <input id="searchbar" onkeydown="Ev(event)">
             <script>
-				const db;
+		let db;
                 URLSP = new URLSearchParams(location.search)
                 document.getElementById("searchbar").value = URLSP.get("q")
                 async function load(){
                     if(periodictable.list.indexOf(URLSP.get("q"))!=-1){
                         atom(URLSP.get("q"))
                     }
-						let GET=""
-							await fetch("https://JRBlockkop.github.io/search/db.json")
-							.then(x => x.text())
-							.then(y => GET = y);
-							db = JSON.parse(GET)
+			let GET=""
+			await fetch("https://JRBlockkop.github.io/search/db.json")
+				.then(x => x.text())
+				.then(y => GET = y);
+			db = JSON.parse(GET)
                 }
                 function Ev(e) {
                 	if(e.key=="Enter"){
