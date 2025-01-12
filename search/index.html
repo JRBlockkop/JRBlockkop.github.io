@@ -46,7 +46,10 @@
 				.then(x => x.text())
 				.then(y => GET = y);
 			db = JSON.parse(GET);
-		    let searchnum = db.keyword.indexOf(URLSP.get("q"))
+		    let searchnum = db.keyword.indexOf(URLSP.get("q"));
+		    if(searchnum!=-1){
+		        alert('searchnum')
+		    }
                 }
                 function Ev(e) {
                 	if(e.key=="Enter"){
