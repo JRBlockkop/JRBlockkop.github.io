@@ -46,7 +46,7 @@
 				.then(x => x.text())
 				.then(y => GET = y);
 			db = JSON.parse(GET);
-		    let searchnum = db.keyword.indexOf(URLSP.get("q"));
+		    let searchnum = db.keyword.indexOf(URLSP.get("q").toLowerCase());
 		    if(searchnum!=-1){
 		        alert('searchnum')
 		    }
