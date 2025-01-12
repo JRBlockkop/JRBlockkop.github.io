@@ -48,7 +48,7 @@
 			db = JSON.parse(GET);
 		    let searchnum = db.keyword.indexOf(URLSP.get("q").toLowerCase());
 		    if(searchnum!=-1){
-		        alert('searchnum')
+		        alert(db.urls[searchnum])
 		    }
                 }
                 function Ev(e) {
