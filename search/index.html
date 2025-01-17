@@ -49,7 +49,7 @@
 		    let searchnum = db.keyword.indexOf(URLSP.get("q").toLowerCase());
 		    if(searchnum!=-1){
 			for(let i = 0;i<3;i++){
-			    result("result"+Number(i+1),db.urls[searchnum][i],URLSP.get("q"),"A","B","Google Microsoft Hallo Welt",URLSP.get("q"))
+			    result("result"+Number(i+1),db.urls[searchnum][i],URLSP.get("q"),"A",db.data[searchnum][i].title,db.data[searchnum][i].text,URLSP.get("q"))
 			    console.log(db.data[searchnum][i])
 			}
 		    }
