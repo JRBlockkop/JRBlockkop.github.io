@@ -1,4 +1,4 @@
-periodictable = {
+const periodictable = {
   list:["Hydrogen","Helium","Lithium","Beryllium","Boron","Carbon","N","O","F","Ne"],
   data:[{name:"Hydrogen",symbol:"H",electrons:1,protons:1,neutrons:0,mass:1.0078},
         {name:"Helium",symbol:"He",electrons:2,protons:2,neutrons:2,mass:4.0026},
