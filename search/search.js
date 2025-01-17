@@ -15,7 +15,7 @@ function result(elmtid,href,name,main_title,title,text,keyword){
             <div>${main_title}</div>
             <div>${href}</div>
         </div>
-        <h1>${main_title}</h1>
+        <h1>${title}</h1>
     </a>
     <div>
         ${text}
