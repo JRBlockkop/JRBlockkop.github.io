@@ -43,6 +43,10 @@ function BntLogin(){
 function Sestion(){
     
 }
+function UserLoginBtn(){
+    href = ""
+    document.getElementById('signinshown').innerHTML='<div>Continue to'+href+'</div><button id="signInBtn">'+Pin.User.name+'</button>'
+}
 async function AlreadyLogin(){
     DataUserGet()
     if(Pin.User.data.username!="" || Pin.User.data.shapassword!=""){
