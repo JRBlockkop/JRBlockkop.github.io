@@ -9,7 +9,7 @@
     <script>
         window.onload = async function () {
             await DataUserGet()
-            if(Pin.User.name=null){
+            if(Pin.User.name==null){
                 document.getElementById("loginshown").style.display = "block"
                 document.getElementById("signinshown").style.display = "none"
             }else{
