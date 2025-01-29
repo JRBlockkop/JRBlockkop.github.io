@@ -9,6 +9,13 @@
     <script>
         window.onload = function () {
             DataUserGet()
+            if(Pin.User.name=null){
+                document.getElementById("loginshown").style.display = "block"
+                document.getElementById("signinshown").style.display = "none"
+            }else{
+                document.getElementById("loginshown").style.display = "none"
+                document.getElementById("signinshown").style.display = "block"
+            }
         }
     </script>
 </head>
@@ -16,10 +23,13 @@
     <div id="data" style="display: none;">
         <iframe src="./data.html" id="ifrdata"></iframe>
     </div>
-    <div>
+    <div id='loginshown'>
         <input type="text" placeholder="Username" id="text-eEgvfn83" required>
         <input type="password" placeholder="Password" id="password-mnpw47" required>
         <button onclick="LoginData(document.getElementById('text-eEgvfn83').value,document.getElementById('password-mnpw47').value)">Login</button>
+    </div>
+    <div id='signinshown'>
+        <button></button>
     </div>
 </body>
 </html>
