@@ -8,6 +8,12 @@ body{
 div{
     color: white;
 }
+#loginshown‎{
+    display:none;
+}
+#signinshown{
+    display:none;
+}
 .main{
     height: 100vh;
     width: 100vw;
