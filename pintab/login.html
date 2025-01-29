@@ -8,7 +8,7 @@
     <script src="console.js"></script>
     <script>
         window.onload = async function () {
-            await DataUserGet()
+            await AlreadyLogin()
             if(Pin.User.name==null){
                 document.getElementById("loginshown").style.display = "block"
                 document.getElementById("signinshown").style.display = "none"
