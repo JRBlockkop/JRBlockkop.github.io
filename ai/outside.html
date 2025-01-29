@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: rgb(11, 11, 21);
+        }
+        #video-container{
+            display: none;
+        }
+        button{
+            height: 50px;
+            width:  50px;
+            border-radius: 50%;
+            border-color: rgb(119, 0, 0);
+            background-color: red;
+            margin: 10px;
+            margin-right: 0px;
+        }
+        .box-share{
+            display: flex;
+            flex-direction: row;
+            height: 70px;
+            width: 130px;
+            background-color: black;
+            border: 2px lightskyblue solid;
+            border-radius: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="screen-share-video" autoplay></video>
+        <canvas id="canvas" style="overflow:auto"></canvas>
+    </div>
+    
+    <div class="interface">
+        <div class="box-share">
+            <button id="share-video">
+                Video
+            </button>
+            <button id="share-audio">
+                Audio
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        const btn1 = document.getElementById("share-video")
+        const btn2 = document.getElementById("share-audio")
+        const video = document.getElementById("screen-share-video")
+        class rgb {
+            constructor(r,g,b){
+                this.r=r;
+                this.g=g;
+                this.b=b;
+            }
+        }
+        function VideoSetup(){
+            navigator.mediaDevices.getDisplayMedia({video:true})
+            .then((stream)=>{
+                video.srcObject = stream;
+                capture()
+            })
+        }
+        function AudioSetup(){
+            navigator.mediaDevices.getUserMedia({audio:true})
+        }
+        const canvas = document.getElementById("canvas");
+        const myvideo = document.querySelector("video");
+        const ctx = canvas.getContext("2d");
+        function capture(){
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            ctx.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
+            const playImage = new Image();
+            playImage.src = "/";
+            playImage.onload = () => {
+                const startX = video.videoWidth / 2 - playImage.width / 2;
+                const startY = video.videoHeight / 2 - playImage.height / 2;
+                ctx.drawImage(playImage, startX, startY, playImage.width, playImage.height);
+                canvas.toBlob() = (blob) => {
+                    const img = new Image();
+                    img.src = window.URL.createObjectUrl(blob);
+                };
+            };
+            requestAnimationFrame( capture )
+        }
+        function getPixel(x,y){
+            let ImageXY = ctx.getImageData(x, y, 1, 1).data
+            return new rgb(ImageXY[0],ImageXY[1],ImageXY[2])
+        }
+        capture();
+        btn1.addEventListener("click",VideoSetup)
+        btn2.addEventListener("click",AudioSetup)
+    </script>
+</body>
+</html>
