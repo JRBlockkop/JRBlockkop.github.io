@@ -62,9 +62,6 @@ async function AlreadyLogin(){
         }
     }else{
         document.getElementById("obenbar").innerHTML = '<button class="Loginbutton" onclick="BntLogin()" title="Anmelden">Anmelden</button>'
-        if(location.href != "https://JRBlockkop.github.io/pintab/"){
-            location.href = "https://JRBlockkop.github.io/pintab/"
-        }
     }
 }
 function DataUserGet(){
