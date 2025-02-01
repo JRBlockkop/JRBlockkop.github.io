@@ -7,6 +7,10 @@ function TokentoWord(arr){
 }
 function Send(){
    let Tokens = document.querySelector("textarea").value.split(" ")
+   LLM(Tokens);
+}
+function LLM(Tokens){
+   
 }
 let Get;
 async function Start(num){
