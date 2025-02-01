@@ -105,5 +105,5 @@ function AccountMenu(){
 function Logout(){
     window.localStorage.clear()
     window.location = "https://JRBlockkop.github.io/pintab/"
-    
+    window.top.location.reload();
 }
