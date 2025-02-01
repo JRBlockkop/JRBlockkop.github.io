@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pintab Mystuff</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        if(localStorage.getItem("name")!=null){
+            location.href = "https://JRBlockkop.github.io/pintab/"
+        }
+    </script>
 </head>
 <body onload="AlreadyLogin()">
-    <div id="obenbar">
-        
-    </div>
+    <div id="obenbar"></div>
     <div id="account-menu">
          <iframe height="140" width="70" frameBorder="0" src="https://jrblockkop.github.io/pintab/apps"></iframe>
     </div>
