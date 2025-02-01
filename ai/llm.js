@@ -11,7 +11,7 @@ function Send(){
    LLM(Tokens);
 }
 function LLM(Tokens){
-   
+   console.log(Tokens)
 }
 let Get;
 async function Start(num){
