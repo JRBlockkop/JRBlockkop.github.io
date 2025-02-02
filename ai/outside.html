@@ -64,7 +64,7 @@
             }
         }
         function VideoSetup(){
-            navigator.mediaDevices.getDisplayMedia({video:true})
+            navigator.mediaDevices.getUserMedia({video:true})
             .then((stream)=>{
                 video.srcObject = stream;
                 capture()
