@@ -57,6 +57,7 @@
                      document.getElementById("searchbar").value = URLSP.get("q")
 		}
                 async function load(){
+			AlreadyLogin()
 			if(URLSP.get("q")!=null){
                     if(periodictable.list.indexOf(URLSP.get("q"))!=-1){
                         atom(URLSP.get("q"))
