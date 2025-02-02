@@ -61,7 +61,7 @@ async function AlreadyLogin(){
             }
         }
     }else{
-        document.getElementById("obenbar").innerHTML = '<button class="Loginbutton" onclick="BntLogin()" title="Anmelden">Anmelden</button>'
+        document.getElementById("obenbar").innerHTML = '<button class="Loginbutton" onclick="BntLogin()" title="Login">Login</button>'
     }
 }
 function DataUserGet(){
