@@ -71,6 +71,7 @@
             })
         }
         function AudioSetup(){
+            document.getElementById("canvas").requestFullscreen()
             navigator.mediaDevices.getUserMedia({audio:true})
         }
         const canvas = document.getElementById("canvas");
