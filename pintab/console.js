@@ -48,7 +48,7 @@ function UserLoginBtn(){
     href = URLSP.get("r")
     document.getElementById('signinshown').innerHTML='<div>Continue to '+href+'</div><button id="signInBtn">'+Pin.User.name+'</button>';
     document.getElementById('signInBtn').onclick=()=>{
-        location.href = href + "?name="+Pin.User.data.username;
+        location.href = href + "?name="+Pin.User.data.username+"&sha="+Pin.User.data.shapassword;
     }
 }
 async function AlreadyLogin(){
