@@ -44,8 +44,9 @@ function Sestion(){
     
 }
 function UserLoginBtn(){
-    href = "jrblockkop.github.io"
-    document.getElementById('signinshown').innerHTML='<div>Continue to'+href+'</div><button id="signInBtn">'+Pin.User.name+'</button>'
+    let URLSP = new URLSearchParams(location.search);
+    href = URLSP.get("r")
+    document.getElementById('signinshown').innerHTML='<div>Continue to '+href+'</div><button id="signInBtn">'+Pin.User.name+'</button>'
 }
 async function AlreadyLogin(){
     DataUserGet()
