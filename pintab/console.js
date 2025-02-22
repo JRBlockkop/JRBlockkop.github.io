@@ -46,7 +46,8 @@ function Sestion(){
 function UserLoginBtn(){
     let URLSP = new URLSearchParams(location.search);
     href = URLSP.get("r")
-    document.getElementById('signinshown').innerHTML='<div>Continue to '+href+'</div><button id="signInBtn">'+Pin.User.name+'</button>';
+    href_URL = new URL(href);
+    document.getElementById('signinshown').innerHTML='<div>Continue to '+href_URL.hostname+'</div><button id="signInBtn">'+Pin.User.name+'</button>';
     document.getElementById('signInBtn').onclick=()=>{
         location.href = href + "?name="+Pin.User.data.username+"&sha="+Pin.User.data.shapassword;
     }
