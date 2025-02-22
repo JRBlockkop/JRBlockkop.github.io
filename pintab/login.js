@@ -2,9 +2,11 @@ const Pintab = {
     IsLogin:false,
     route:"/",
     login:()=>{
-        update()
-        href = location.href
-        window.open("https://jrblockkop.github.io/pintab/login?r="+href + Pintab.route,"Pintab","popup,left=100,top=100,width=380,height=420")
+        if(Pintab.IsLogin==false){
+            update()
+            href = location.href
+            window.open("https://jrblockkop.github.io/pintab/login?r="+href + Pintab.route,"Pintab","popup,left=100,top=100,width=380,height=420")
+        }
     },
     User:{
         name:"",
@@ -16,6 +18,7 @@ function update(){
     if(localStorage.getItem("pintab_name")!=null){
         Pintab.User.name = localStorage.getItem("pintab_name");
         Pintab.User.token = localStorage.getItem("pintab_sha");
+        Pintab.IsLogin=true;
         try {
             Pintab.afterlogin()
         } catch (error) {
