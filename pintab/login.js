@@ -1,7 +1,8 @@
 const Pintab = {
     IsLogin:false,
     login:()=>{
-        window.open("https://jrblockkop.github.io/pintab/login?r=http://localhost:3030/api/pintab","Pintab","popup,left=100,top=100,width=320,height=320")
+        href = location.href
+        window.open("https://jrblockkop.github.io/pintab/login?r="+href,"Pintab","popup,left=100,top=100,width=380,height=420")
     },
     User:{
         name:"",
