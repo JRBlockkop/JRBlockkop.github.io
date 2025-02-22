@@ -5,6 +5,6 @@ const Pintab = {
     },
     User:{
         name:"",
-        sha:"",
+        token:"",
     },
 }
