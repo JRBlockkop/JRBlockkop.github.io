@@ -24,4 +24,4 @@ function update(){
         requestAnimationFrame( update );
     }
 }
-update()
+document.body.onload=update()
