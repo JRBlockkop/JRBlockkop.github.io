@@ -4,6 +4,7 @@ body{
 }
 #host{
     color:lightblue;
+    margin-left:2px;
 }
 #Savebox{
     display: none;
