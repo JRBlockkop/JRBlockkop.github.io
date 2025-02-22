@@ -49,7 +49,9 @@ function UserLoginBtn(){
     href_URL = new URL(href);
     document.getElementById('signinshown').innerHTML='<div style="display: flex;">Continue to <div id="host"> '+href_URL.hostname+'</div></div><button id="signInBtn">'+Pin.User.name+'</button>';
     document.getElementById('signInBtn').onclick=()=>{
-        location.href = href + "?name="+Pin.User.data.username+"&sha="+Pin.User.data.shapassword;
+        if(href_URL.protocol!="javascript:"){
+            location.href = href + "?name="+Pin.User.data.username+"&sha="+Pin.User.data.shapassword;
+        }
     }
 }
 async function AlreadyLogin(){
