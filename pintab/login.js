@@ -14,4 +14,15 @@ const Pintab = {
         name:"",
         token:"",
     },
+    afterlogin:()=>{},
 }
+function update(){
+    if(localStorage.getItem("pintab_name")!=null){
+        Pintab.User.name = localStorage.getItem("pintab_name");
+        Pintab.User.token = localStorage.getItem("pintab_sha");
+        console.log('logedIn')
+    }else{
+        requestAnimationFrame( update );
+    }
+}
+update()
