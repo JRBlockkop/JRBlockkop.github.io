@@ -15,7 +15,11 @@ function update(){
     if(localStorage.getItem("pintab_name")!=null){
         Pintab.User.name = localStorage.getItem("pintab_name");
         Pintab.User.token = localStorage.getItem("pintab_sha");
-        console.log('logedIn')
+        try {
+            Pintab.afterlogin()
+        } catch (error) {
+            console.error(error)
+        }
     }else{
         requestAnimationFrame( update );
     }
