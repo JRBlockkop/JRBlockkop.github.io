@@ -43,7 +43,7 @@ function BntLogin(){
 function Sestion(){
     
 }
-function UserLoginBtn(){
+async function UserLoginBtn(){
     let URLSP = new URLSearchParams(location.search);
     href = URLSP.get("r")
     href_URL = new URL(href);
