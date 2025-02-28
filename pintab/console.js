@@ -52,7 +52,7 @@ async function UserLoginBtn(){
         if(href_URL.protocol!="javascript:"){
             let TimeDate = new Date()
             let shatoken;
-            await SHA256(Pin.User.name + "." + Pin.User.data.shapassword + "." + TimeDate.getTime()).then(x=> shatoken = x);;
+            await SHA256(Pin.User.name + "." + Pin.User.data.shapassword + "." + TimeDate.getTime()).then(x=> shatoken = x);
             let datatoken = TimeDate.getTime()+"."+Pin.User.name;
             location.href = href + "?name="+Pin.User.data.username+"&token="+ datatoken+"."+shatoken;
         }
