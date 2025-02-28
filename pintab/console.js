@@ -50,7 +50,10 @@ function UserLoginBtn(){
     document.getElementById('signinshown').innerHTML='<div style="display: flex;">Continue to <div id="host"> '+href_URL.hostname+'</div></div><button id="signInBtn">'+Pin.User.name+'</button>';
     document.getElementById('signInBtn').onclick=()=>{
         if(href_URL.protocol!="javascript:"){
-            location.href = href + "?name="+Pin.User.data.username+"&sha="+Pin.User.data.shapassword;
+            let TimeDate = new Date()
+            let shatoken = SHA256(Pin.User.name + "." + Pin.User.data.shapassword + "." + TimeDate.getTime());
+            let datatoken = TimeDate+".";
+            location.href = href + "?name="+Pin.User.data.username+"&token="+ datatoken+"."+shatoken;
         }
     }
 }
