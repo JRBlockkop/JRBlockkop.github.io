@@ -51,8 +51,9 @@ function UserLoginBtn(){
     document.getElementById('signInBtn').onclick=()=>{
         if(href_URL.protocol!="javascript:"){
             let TimeDate = new Date()
-            let shatoken = SHA256(Pin.User.name + "." + Pin.User.data.shapassword + "." + TimeDate.getTime());
-            let datatoken = TimeDate+".";
+            let shatoken;
+            await SHA256(Pin.User.name + "." + Pin.User.data.shapassword + "." + TimeDate.getTime()).then(x=> shatoken = x);;
+            let datatoken = TimeDate.getTime()+"."+Pin.User.name;
             location.href = href + "?name="+Pin.User.data.username+"&token="+ datatoken+"."+shatoken;
         }
     }
