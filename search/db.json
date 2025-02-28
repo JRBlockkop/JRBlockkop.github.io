@@ -14,12 +14,12 @@
     [
       {"domain_title":"Google","title":"Google","text":"Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking ..."},
       {"domain_title":"Wikipedia","title":"Google","text":"Google LLC is an American multinational corporation and technology company focusing on online advertising, search engine technology, cloud computing, ..."},
-      {"domain_title":"Google","title":"Google Accounts: Sign in","text":"Sign in. Use your Google Account. Email or phone. Forgot email? CAPTCHA image of text used to distinguish humans from robots ... Sign in Use your Google Account."},
+      {"domain_title":"Google","title":"Google Accounts: Sign in","text":"Sign in. Use your Google Account. Email or phone. Forgot email? CAPTCHA image of text used to distinguish humans from robots ... Sign in Use your Google Account."}
     ],
     [
       {"domain_title":"Microsoft","title":"Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps","text":"Explore Microsoft products and services and support for your home or business. Shop Microsoft 365, Copilot, Teams, Xbox, Windows, Azure, Surface and more."},
       {"domain_title":"MSN","title":"MSN | Outlook, Office, Skype, Bing, Breaking News, and Latest Videos","text":"Your customizable and curated collection of the best in trusted news plus coverage of sports, entertainment, money, weather, travel, health and lifestyle, ..."},
       {"domain_title":"Office 365","title":"Microsoft 365: Login","text":"Welcome to Microsoft 365. The Microsoft 365 app (formerly Office) lets you create, share, and collaborate all in one place with your favorites apps now ..."}
-    ],
+    ]
   ]
 }
