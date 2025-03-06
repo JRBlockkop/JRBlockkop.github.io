@@ -1,1 +1,54 @@
-
+body{
+    margin:0px;
+    background-color: rgb(37, 37, 37);
+}
+#obenbar{
+    height: 50px;
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Loginbutton{
+    border-color: rgb(70, 70, 70);
+    background-color: rgb(10, 10, 10);
+    width: 120px;
+    height: 35px;
+    border-radius: 35px;
+    margin-left: calc(100vw - 125px);
+    margin-top: 5px;
+    color: cornflowerblue;
+}
+.Loginbutton:hover{
+    background-color: rgb(42, 107, 227);
+    border-color: rgb(42, 107, 227);
+}
+.icon-color{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 5px;
+    font-size:30px;
+}
+.red{
+    background-color: red;
+}
+.Account{
+    margin-left: calc(100vw - 46px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#account-menu{
+    position: absolute;
+    display: none;
+    top:50px;
+    right:0px;
+    background-color: grey;
+    height: 140px;
+    width: 70px;
+}
