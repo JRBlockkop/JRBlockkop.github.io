@@ -70,6 +70,11 @@ div.content{
         div.inputsearch>input{
             height:50px;
             width:calc(100vw - 200px);
+            outline: none;
+  background-color: black;
+  color: white;
+  border: 1px gray solid;
+  border-radius: 10px;
         }
         .resultbox{
         height:200px;
