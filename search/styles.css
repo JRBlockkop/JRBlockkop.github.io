@@ -6,8 +6,8 @@ body{
     position:absolute;
     top:0px;
     right:0px;
-    height: 50px;
-    width: 100px;
+    height: 40px;
+    width: 45px;
     color: white;
     display: flex;
     flex-direction: row;
@@ -41,7 +41,6 @@ body{
     background-color: red;
 }
 .Account{
-    margin-left: calc(100vw - 46px);
     display: flex;
     justify-content: center;
     align-items: center;
