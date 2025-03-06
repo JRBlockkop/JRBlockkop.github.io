@@ -54,3 +54,35 @@ body{
     height: 140px;
     width: 70px;
 }
+div.content{
+            height:98vh;
+            width:99vw;
+        }
+        div.inputsearch{
+            height:90px;
+            width:100vw;
+            display:flex;
+            justify-content: center;
+        }
+        div.inputsearch>input{
+            height:50px;
+            width:calc(100vw - 200px);
+        }
+        .resultbox{
+        height:200px;
+        width:100vw;
+    }
+    .result_title{
+        text-decoration: none;
+    }
+    .result_title>h1{
+        margin: 0px;
+        color: blue;
+        text-decoration: none;
+    }
+    .result_title>h1:hover{
+        text-decoration: underline;
+    }
+    .top_title>div{
+        color: black;
+    }
