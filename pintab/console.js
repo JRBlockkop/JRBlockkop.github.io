@@ -102,7 +102,7 @@ async function LoginData(username,password){
                 if(new URLSearchParams(location.search).get("r")==null){
                     window.location = "https://JRBlockkop.github.io/pintab/mystuff"
                 }else{
-                    await UserLoginBtn()
+                    console.log("login")
                 }
             },500)
         }
