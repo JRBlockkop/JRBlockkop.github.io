@@ -98,7 +98,7 @@ async function LoginData(username,password){
         if(Pin.data.data.users.dsha[Pin.data.data.users.name.indexOf(Get)]==Jet){
             Pin.User.name = username;
             DataUserSet(username,Het,Pin.time());
-            setTimeout( function (){
+            setTimeout( async ()=>{
                 if(new URLSearchParams(location.search).get("r")==null){
                     window.location = "https://JRBlockkop.github.io/pintab/mystuff"
                 }else{
