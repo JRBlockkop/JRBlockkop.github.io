@@ -99,7 +99,11 @@ async function LoginData(username,password){
             Pin.User.name = username;
             DataUserSet(username,Het,Pin.time());
             setTimeout( function (){
-                window.location = "https://JRBlockkop.github.io/pintab/mystuff"
+                if(new URLSearchParams(location.search).get("r")==null{
+                    window.location = "https://JRBlockkop.github.io/pintab/mystuff"
+                }else{
+                    await UserLoginBtn()
+                }
             },500)
         }
     }
