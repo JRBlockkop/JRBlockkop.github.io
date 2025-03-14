@@ -48,7 +48,7 @@ async function UserLoginBtn(){
     href = URLSP.get("r")
     href_URL = new URL(href);
     document.getElementById('signinshown').innerHTML='<div style="display: flex;">Continue to <div id="host"> '+href_URL.hostname+'</div></div><button id="signInBtn">'+Pin.User.name+'</button>';
-    document.getElementById('signInBtn').onclick=()=>{
+    document.getElementById('signInBtn').onclick=async()=>{
         if(href_URL.protocol!="javascript:"){
             let TimeDate = new Date()
             let shatoken;
