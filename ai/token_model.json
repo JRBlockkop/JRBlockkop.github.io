@@ -1,0 +1,16 @@
+[
+    "object",
+    "id",
+    "name",
+    "second_name",
+    "x",
+    "y",
+    "z",
+    "color_r",
+    "color_g",
+    "color_b",
+    "height",
+    "width",
+    "lenght",
+    "uint"
+]
