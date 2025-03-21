@@ -1,9 +1,9 @@
 const data = [];
 function WordtoToken(str){
-   return Get.data[Get.words.indexOf(str)].v
+   return Get.data[Get.words.indexOf(str.toLowerCase())].v
 }
 function TokentoWord(arr){
-   return Get.data[Get.words.indexOf(str)].v
+   
 }
 function Send(){
    let WordArray = document.querySelector("textarea").value.split(" ");
