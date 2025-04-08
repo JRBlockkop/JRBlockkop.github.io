@@ -1,0 +1,27 @@
+body{
+    margin: 0px;
+    background-color: #304D6D;
+    color:#A7CCED;
+}
+button{
+    background-color: #545E75;
+    color: #82A0BC;
+    border: 2px #63ADF2 solid;
+    border-radius: 7px;
+}
+textarea{
+    background-color: #545E75;
+    border: 2px #63ADF2 solid;
+    border-radius: 7px;
+    resize: none;
+    display: block;
+    height: 200px;
+    width: 300px;
+}
+/*
+545E75
+63ADF2
+A7CCED
+304D6D
+82A0BC
+*/
