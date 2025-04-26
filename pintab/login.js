@@ -6,7 +6,7 @@ const Pintab = {
             update()
             let r = new URL(location.href);
             r.pathname=Pintab.route;
-            window.open("https://jrblockkop.github.io/pintab/login?r="+r+"Pintab","popup,left=100,top=100,width=385,height=420")
+            window.open("https://jrblockkop.github.io/pintab/login?r="+r,"Pintab","popup,left=100,top=100,width=385,height=420")
         }
     },
     User:{
