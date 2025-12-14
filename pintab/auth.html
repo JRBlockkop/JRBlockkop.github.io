@@ -6,10 +6,24 @@
       body{
         background-color: black;
       }
+      #obenbar{
+        display: none !important;
+      }
     </style>
     <script src="console.js"></script>
   </head>
 <body>
-  
+  <div id="obenbar"></div>
+  <script>
+    window.onload = async function () {
+            await AlreadyLogin()
+            const URLSP = new URLSearchParams()
+            if(Pin.User.name==null){
+              try{await LoginData(URLSP.get('u'),URLSP.get('p'))}catch(e){}
+            }else{
+              window.close()
+            }
+    }
+  </script>
 </body>
 </html>
